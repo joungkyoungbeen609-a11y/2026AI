@@ -42,17 +42,15 @@
     import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
     
     // 환경 설정 주입 (보안 및 배포 호환용 시스템 변수 연동)
-    const firebaseConfig = typeof __firebase_config !== 'undefined' 
-      ? JSON.parse(__firebase_config) 
-      : {
-          apiKey: "AIzaSyCTrC7DZPG3JyPlRcW0CZmFrVspZAjsMII",
-          authDomain: "ai-3375e.firebaseapp.com",
-          projectId: "ai-3375e",
-          storageBucket: "ai-3375e.firebasestorage.app",
-          messagingSenderId: "513210760471",
-          appId: "1:513210760471:web:1d78bc9ebaa2386edf4b52"
-        };
-
+const firebaseConfig = {
+  apiKey: "AIzaSyCTrC7DZPG3JyPlRcW0CZmFrVspZAjsMII",
+  authDomain: "ai-3375e.firebaseapp.com",
+  projectId: "ai-3375e",
+  storageBucket: "ai-3375e.firebasestorage.app",
+  messagingSenderId: "513210760471",
+  appId: "1:513210760471:web:1d78bc9ebaa2386edf4b52",
+  measurementId: "G-4KL6LGL74S"
+};
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
